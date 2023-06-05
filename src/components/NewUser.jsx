@@ -1,6 +1,6 @@
 import { gql, useMutation } from "@apollo/client";
 import React, { useState } from "react";
-import Input from "./Input";
+import Input from "./UI/Input";
 // { name: "Ruchi", username: "ruchi", email: "ruchi@r.com" }
 const CREATE_USER = gql`
   mutation NewUser($input: CreateUserInput) {

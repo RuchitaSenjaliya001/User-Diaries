@@ -7,6 +7,8 @@ function BasicTable() {
     const columns = useMemo(() => COLUMNS, []);
     const data = useMemo(() => DUMMY, []);
 
+
+
     const {
         getTableProps,
         getTableBodyProps,
