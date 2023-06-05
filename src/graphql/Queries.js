@@ -20,3 +20,25 @@ export const GET_USER = gql`
     }
   }
 `;
+
+export const ALL_USERS = gql`
+  query AllUsers {
+    users {
+      data {
+        id
+        name
+        username
+        email
+        address {
+          street
+          suite
+          city
+          zipcode
+        }
+        phone
+        website
+        company
+      }
+    }
+  }
+`;
