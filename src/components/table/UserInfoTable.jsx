@@ -1,4 +1,5 @@
 import React from "react";
+import { RingLoader } from "react-spinners";
 import { usePagination, useTable } from "react-table";
 
 export default function UserInfoTable({
@@ -26,6 +27,8 @@ export default function UserInfoTable({
 
     if (loading)
         return <p className="text-center font-semibold text-xl py-5">Loading...</p>;
+
+
     if (error)
         return (
             <>
@@ -41,7 +44,7 @@ export default function UserInfoTable({
             <h1 className="text-center font-bold text-2xl py-5">{title}</h1>
             <table
                 {...getTableProps()}
-                className="max-w-7xl m-auto table-auto border border-slate-500 px-5"
+                className="max-w-7xl m-auto table-auto px-5"
             >
                 <thead>
                     {headerGroups.map((headerGroup) => (
@@ -68,7 +71,7 @@ export default function UserInfoTable({
                                         <td
                                             {...cell.getCellProps()}
                                             key
-                                            className="border border-slate-700 p-2"
+                                            className="border border-zinc-400 p-2"
                                         >
                                             {cell.render("Cell")}
                                         </td>

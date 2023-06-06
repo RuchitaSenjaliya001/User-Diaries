@@ -5,6 +5,7 @@ export const GET_USER = gql`
     user(id: $id) {
       id
       name
+      username
       email
       website
       phone
@@ -29,6 +30,9 @@ export const ALL_USERS = gql`
         name
         username
         email
+        company {
+          name
+        }
         website
         phone
       }
@@ -43,6 +47,9 @@ export const ALL_POSTS = gql`
         id
         title
         body
+        user {
+          name
+        }
       }
     }
   }

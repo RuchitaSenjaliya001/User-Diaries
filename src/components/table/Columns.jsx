@@ -8,10 +8,18 @@ export const USER_COLUMNS = [
         accessor: "name",
     },
     {
+        Header: "USERNAME",
+        accessor: "username",
+    },
+    {
         Header: "EMAIL",
         accessor: "email",
     },
 
+    {
+        Header: "COMPANY",
+        accessor: "company.name",
+    },
     {
         Header: "WEBSITE",
         accessor: "website",
@@ -35,5 +43,9 @@ export const POST_COLUMNS = [
     {
         Header: "BODY",
         accessor: "body",
+    },
+    {
+        Header: "USER",
+        accessor: "user.name",
     },
 ]

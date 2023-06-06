@@ -14,6 +14,9 @@ export default function UserDetail({ data }) {
                             ID: <span className="font-normal">{data.user.id}</span>
                         </div>
                         <div className="font-bold py-2">
+                            USERNAME: <span className="font-normal">{data.user.username}</span>
+                        </div>
+                        <div className="font-bold py-2">
                             EMAIL: <span className="font-normal">{data.user.email}</span>
                         </div>
                         <div className="font-bold py-2">
@@ -34,7 +37,10 @@ export default function UserDetail({ data }) {
                     </div>
                 </div>
             ) : (
-                <p className="text-center py-4">No user found with this id.</p>
+                <div className="py-4">
+                    <p className="text-center">No user found with this id.</p>
+                    <p className="text-center text-red-500">Please enter valid user id. (between <b>1</b> to <b>10</b>)</p>
+                </div>
             )}
         </>
     );
