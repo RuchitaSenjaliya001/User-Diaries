@@ -5,11 +5,14 @@ export default function UserDetail({ data }) {
     return (
         <>
             {data.user.name !== null ? (
-                <div className="max-w-5xl m-auto bg-violet-100 mt-5 p-5 rounded-md">
+                <div className="max-w-4xl m-auto bg-violet-100 mt-5 p-5 rounded-md">
                     <h1 className="font-bold py-2 text-center uppercase text-xl">
                         {data.user.name}
                     </h1>
                     <div className="">
+                        <div className="font-bold py-2">
+                            ID: <span className="font-normal">{data.user.id}</span>
+                        </div>
                         <div className="font-bold py-2">
                             EMAIL: <span className="font-normal">{data.user.email}</span>
                         </div>
@@ -24,6 +27,9 @@ export default function UserDetail({ data }) {
                         </div>
                         <div className="font-bold py-2">
                             WEBSITE: <span className="font-normal">{data.user.website}</span>
+                        </div>
+                        <div className="font-bold py-2">
+                            PHONE: <span className="font-normal">{data.user.phone}</span>
                         </div>
                     </div>
                 </div>

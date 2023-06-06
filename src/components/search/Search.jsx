@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import UserDetail from './UserDetail';
-import { useLazyQuery } from '@apollo/client'
-import { GET_USER } from '@/graphql/Queries';
+import React, { useState } from "react";
+import UserDetail from "./UserDetail";
+import { useLazyQuery } from "@apollo/client";
+import { GET_USER } from "@/graphql/Queries";
 
 export default function Search() {
     const [searchedUser, setSearchedUser] = useState("");
@@ -16,7 +16,6 @@ export default function Search() {
     };
     return (
         <div className="">
-
             <div className="text-center">
                 <input
                     type="text"
@@ -39,13 +38,15 @@ export default function Search() {
             {loading && <p className="text-center pt-5"> Loading...</p>}
 
             {error && (
-                <p className="text-center text-red-500 font-bold text-xl pt-5">
-                    Error :(
-                </p>
+                <>
+                    <div className="my-3">
+                        <p className="text-center font-semibold text-xl py-2">Error :(</p>
+                        <p className="text-center text-lg text-red-500">{error.message}</p>
+                    </div>
+                </>
             )}
 
             {data !== undefined && <UserDetail data={data} />}
-
         </div>
-    )
+    );
 }
