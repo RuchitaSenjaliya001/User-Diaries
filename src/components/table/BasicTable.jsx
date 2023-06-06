@@ -2,8 +2,6 @@ import React, { useMemo } from "react";
 import DUMMY from "../dummy-data.json";
 import { useTable, usePagination } from "react-table";
 import { COLUMNS } from "./Columns";
-import { useQuery } from "@apollo/client";
-import { ALL_USERS } from "@/graphql/Queries";
 
 function BasicTable() {
     const columns = useMemo(() => COLUMNS, []);
@@ -14,8 +12,8 @@ function BasicTable() {
         getTableProps,
         getTableBodyProps,
         headerGroups,
-        page,
         prepareRow,
+        page,
         nextPage,
         previousPage,
         canPreviousPage,

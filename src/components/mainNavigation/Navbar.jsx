@@ -8,7 +8,7 @@ export default function Navbar() {
             <ul className='flex space-x-5 cursor-pointer'>
                 <Link href="/">Home</Link>
                 <Link href="/search">Search</Link>
-                <Link href="/new-user">New User</Link>
+                <Link href="/posts">Posts</Link>
             </ul>
         </div>
     )

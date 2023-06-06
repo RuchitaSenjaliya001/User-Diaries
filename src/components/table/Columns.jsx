@@ -28,4 +28,12 @@ export const POST_COLUMNS = [
         Header: "ID",
         accessor: "id",
     },
+    {
+        Header: "TITLE",
+        accessor: "title",
+    },
+    {
+        Header: "BODY",
+        accessor: "body",
+    },
 ]
