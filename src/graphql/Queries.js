@@ -29,15 +29,20 @@ export const ALL_USERS = gql`
         name
         username
         email
-        address {
-          street
-          suite
-          city
-          zipcode
-        }
-        phone
         website
-        company
+        phone
+      }
+    }
+  }
+`;
+
+export const ALL_POSTS = gql`
+  query posts {
+    posts {
+      data {
+        id
+        title
+        body
       }
     }
   }

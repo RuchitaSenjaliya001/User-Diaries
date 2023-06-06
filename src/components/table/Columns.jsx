@@ -1,35 +1,31 @@
-export const COLUMNS = [
+export const USER_COLUMNS = [
     {
-        Header: 'ID',
-        accessor: 'id'
+        Header: "ID",
+        accessor: "id",
     },
     {
-        Header: 'FIRST NAME',
-        accessor: 'first_name'
+        Header: "NAME",
+        accessor: "name",
     },
     {
-        Header: 'LAST NAME',
-        accessor: 'last_name'
+        Header: "EMAIL",
+        accessor: "email",
     },
-    {
-        Header: 'EMAIL',
-        accessor: 'email'
-    },
-    {
-        Header: 'DATE OF BIRTH',
-        accessor: 'date_of_birth',
 
+    {
+        Header: "WEBSITE",
+        accessor: "website",
     },
     {
-        Header: 'AGE',
-        accessor: 'age'
+        Header: "PHONE",
+        accessor: "phone",
     },
+
+];
+
+export const POST_COLUMNS = [
     {
-        Header: 'COUNTRY',
-        accessor: 'country'
-    },
-    {
-        Header: 'PHONE',
-        accessor: 'phone'
+        Header: "ID",
+        accessor: "id",
     },
 ]
