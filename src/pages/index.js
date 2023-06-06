@@ -1,14 +1,21 @@
-import Search from "@/components/search/Search";
-import BasicTable from "@/components/table/BasicTable";
 import { USER_COLUMNS } from "@/components/table/Columns";
 import UserInfoTable from "@/components/table/UserInfoTable";
 import { ALL_USERS } from "@/graphql/Queries";
+import { useQuery } from "@apollo/client";
+import { useMemo } from "react";
 
 export default function Home() {
+  const { data, loading, error } = useQuery(ALL_USERS);
+
+  const columns = useMemo(() => USER_COLUMNS, []);
+  const tableData = useMemo(() => data?.users?.data || [], [data]);
   return (
-    <>
-      <UserInfoTable query={ALL_USERS} column={USER_COLUMNS} />
-      {/* <BasicTable /> */}
-    </>
+    <UserInfoTable
+      title="User Info"
+      column={columns}
+      tableData={tableData}
+      loading={loading}
+      error={error}
+    />
   );
 }
