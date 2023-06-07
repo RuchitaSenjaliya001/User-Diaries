@@ -1,3 +1,5 @@
+import { EditableCell } from "./Editable";
+
 export const USER_COLUMNS = [
     {
         Header: "ID",
@@ -6,14 +8,17 @@ export const USER_COLUMNS = [
     {
         Header: "NAME",
         accessor: "name",
+        Cell: EditableCell,
     },
     {
         Header: "USERNAME",
         accessor: "username",
+        Cell: EditableCell,
     },
     {
         Header: "EMAIL",
         accessor: "email",
+        Cell: EditableCell,
     },
 
     {
