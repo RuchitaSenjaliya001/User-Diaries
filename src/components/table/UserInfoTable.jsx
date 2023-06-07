@@ -1,5 +1,4 @@
 import React from "react";
-import { RingLoader } from "react-spinners";
 import { usePagination, useTable } from "react-table";
 
 export default function UserInfoTable({
