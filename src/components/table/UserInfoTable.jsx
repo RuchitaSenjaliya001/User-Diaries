@@ -1,5 +1,6 @@
 import React from "react";
-import { usePagination, useTable } from "react-table";
+import { useGlobalFilter, usePagination, useTable } from "react-table";
+import GlobalFilter from "./GlobalFilter";
 
 export default function UserInfoTable({
     tableData,
@@ -20,13 +21,17 @@ export default function UserInfoTable({
         canNextPage,
         pageOptions,
         state,
-    } = useTable({ columns: column, data: tableData }, usePagination);
+        setGlobalFilter,
+    } = useTable(
+        { columns: column, data: tableData },
+        useGlobalFilter,
+        usePagination
+    );
 
-    const { pageIndex } = state;
+    const { pageIndex, globalFilter } = state;
 
     if (loading)
         return <p className="text-center font-semibold text-xl py-5">Loading...</p>;
-
 
     if (error)
         return (
@@ -40,11 +45,11 @@ export default function UserInfoTable({
 
     return (
         <>
-            <h1 className="text-center font-bold text-2xl py-5">{title}</h1>
-            <table
-                {...getTableProps()}
-                className="max-w-7xl m-auto table-auto px-5"
-            >
+            <h1 className="text-center font-bold text-2xl pt-5">{title}</h1>
+            <div className=" max-w-5xl flex items-center justify-end m-auto mb-5">
+                <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+            </div>
+            <table {...getTableProps()} className="max-w-7xl m-auto table-auto px-5">
                 <thead>
                     {headerGroups.map((headerGroup) => (
                         <tr {...headerGroup.getHeaderGroupProps()} key>
