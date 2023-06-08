@@ -9,6 +9,7 @@ export default function Navbar() {
                 <Link href="/">Home</Link>
                 <Link href="/search">Search</Link>
                 <Link href="/posts">Posts</Link>
+                <Link href="/date">DatePicker</Link>
             </ul>
         </div>
     )
