@@ -46,46 +46,52 @@ export default function UserInfoTable({
     return (
         <>
             <h1 className="text-center font-bold text-2xl pt-5">{title}</h1>
-            <div className=" max-w-5xl flex items-center justify-end m-auto mb-5">
-                <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-            </div>
-            <table {...getTableProps()} className="max-w-7xl m-auto table-auto px-5">
-                <thead>
-                    {headerGroups.map((headerGroup) => (
-                        <tr {...headerGroup.getHeaderGroupProps()} key>
-                            {headerGroup.headers.map((column) => (
-                                <th
-                                    {...column.getHeaderProps()}
-                                    key
-                                    className="bg-violet-500 py-2 text-white border border-slate-600"
-                                >
-                                    {column.render("Header")}
-                                </th>
-                            ))}
-                        </tr>
-                    ))}
-                </thead>
-                <tbody {...getTableBodyProps()}>
-                    {page.map((row) => {
-                        prepareRow(row);
-                        return (
-                            <tr {...row.getRowProps()} key className="even:bg-gray-200">
-                                {row.cells.map((cell) => {
-                                    return (
-                                        <td
-                                            {...cell.getCellProps()}
-                                            key
-                                            className="border border-zinc-400 p-2"
-                                        >
-                                            {cell.render("Cell")}
-                                        </td>
-                                    );
-                                })}
+
+            <div className="overflow-x-auto">
+                <div className="text-center md:text-right px-3 pb-5 pt-3 xl:pt-0 xl:max-w-7xl xl:m-auto">
+                    <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+                </div>
+                <table
+                    {...getTableProps()}
+                    className="min-w-[90%] lg:max-w-5xl xl:max-w-7xl lg:m-auto table-auto px-5 m-3"
+                >
+                    <thead>
+                        {headerGroups.map((headerGroup) => (
+                            <tr {...headerGroup.getHeaderGroupProps()} key>
+                                {headerGroup.headers.map((column) => (
+                                    <th
+                                        {...column.getHeaderProps()}
+                                        key
+                                        className="bg-violet-500 py-2 text-white border border-slate-600"
+                                    >
+                                        {column.render("Header")}
+                                    </th>
+                                ))}
                             </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
+                        ))}
+                    </thead>
+                    <tbody {...getTableBodyProps()}>
+                        {page.map((row) => {
+                            prepareRow(row);
+                            return (
+                                <tr {...row.getRowProps()} key className="even:bg-gray-200">
+                                    {row.cells.map((cell) => {
+                                        return (
+                                            <td
+                                                {...cell.getCellProps()}
+                                                key
+                                                className="border border-zinc-400 p-2"
+                                            >
+                                                {cell.render("Cell")}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
+            </div>
             {pageOptions.length > 2 && (
                 <div className="text-center space-x-5 my-5">
                     <button
