@@ -844,7 +844,7 @@ export default function CalenderChart() {
             from="2015-03-01"
             to="2016-07-12"
             emptyColor="#eeeeee"
-            colors={['#97e3d5', '#61cdbb', '#e8c1a0', '#f47560']}
+            colors={['#ccdeff', '#70a4ff', '#2c71e8', '#2a4b84']}
             margin={{ top: 0, right: 20, bottom: 40, left: 40 }}
             yearSpacing={40}
             monthBorderColor="#ffffff"
@@ -854,7 +854,6 @@ export default function CalenderChart() {
                 {
                     anchor: 'bottom-right',
                     direction: 'row',
-                    // translateY: 36,
                     itemCount: 4,
                     padding: 50,
                     itemWidth: 42,
