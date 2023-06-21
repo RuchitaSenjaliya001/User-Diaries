@@ -15,6 +15,8 @@ export default function Navbar() {
                 <Link href="/posts">Posts</Link>
                 <Link href="/date">DatePicker</Link>
                 <Link href="/chart">Charts</Link>
+                <Link href="/drop-zone">DropZone</Link>
+                <Link href="/calender">FullCalender</Link>
             </ul>
         </div>
     );

@@ -10,7 +10,6 @@ export default function Home() {
   const columns = useMemo(() => USER_COLUMNS, []);
   const tableData = useMemo(() => data?.users?.data || [], [data]);
   return (
-    // <></>
     <UserInfoTable
       title="User Info"
       column={columns}
