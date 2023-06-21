@@ -24,3 +24,4 @@ React DropZone
 React FullCalender
 
 ![image](https://github.com/RuchitaSenjaliya001/User-Diaries/assets/127396165/dc254462-0727-4491-b9a5-18685a136c6d)
+![image](https://github.com/RuchitaSenjaliya001/User-Diaries/assets/127396165/5ac7a93f-ea5f-4dbf-a8a9-017d4dea4042)
