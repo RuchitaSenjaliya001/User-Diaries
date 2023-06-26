@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  // reactStrictMode: false,
+  images: {
+    domains: ["img.freepik.com", "robohash.org"],
+  },
 };
 
 module.exports = nextConfig;

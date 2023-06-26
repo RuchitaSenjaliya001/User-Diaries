@@ -17,6 +17,7 @@ export default function Navbar() {
                 <Link href="/chart">Charts</Link>
                 <Link href="/drop-zone">DropZone</Link>
                 <Link href="/calender">FullCalender</Link>
+                <Link href="/dnd">React Beautifull DND</Link>
             </ul>
         </div>
     );
