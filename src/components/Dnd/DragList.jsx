@@ -102,7 +102,7 @@ export default function DragList() {
                                             {...provided.dragHandleProps}
                                             {...provided.draggableProps}
                                             ref={provided.innerRef}
-                                            className=" bg-violet-100 my-2 px-5 py-1"
+                                            className=" bg-violet-100 my-2 px-5 py-2 rounded-md"
                                         >
                                             <h1>{store.name}</h1>
                                         </div>
